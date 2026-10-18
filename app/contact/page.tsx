@@ -1,0 +1,10 @@
+"use client";
+
+import { BrandMark } from "@/components/BrandMark";
+import { club, images } from "@/lib/content";
+
+const notes = ["PEHEL BEGINS WITH PEOPLE", "EVERY CONTRIBUTION COUNTS", "A CAMPUS COMES TOGETHER", "EVERY DIWALI", "THANK YOU TO OUR AUXILIARY STAFF", "TEAM INDIGO / GGITS"];
+
+export default function Contact() {
+  return <section className="contact-page"><div className="contact-main"><BrandMark className="contact-mark"/><div className="floating-window email-window"><div className="window-bar"><span/> TEAM INDIGO SOCIAL <b>✕</b></div><a className="contact-window-link" href={club.socials[0].href} target="_blank" rel="noreferrer">@teamindigoggits ↗</a></div><div className="contact-center"><p className="micro">[ YOUR IDEA IS INVITED ]</p><h1 className="display">(Psst)<br/>Have an idea?</h1><p>Want to help with Pehel, perform, contribute to the hamper drive, or share an idea with Team Indigo? We would love to hear from you.</p><a className="contact-copy" href={club.socials[0].href} target="_blank" rel="noreferrer">MESSAGE US ON INSTAGRAM <b>↗</b></a></div><div className="floating-window social-window"><div className="window-bar"><span/> FIND THE CREW <b>✕</b></div><div className="social-window-body"><a href={club.socials[0].href} target="_blank" rel="noreferrer">[ INSTAGRAM ↗ ]</a><a href="/events">[ PEHEL ]</a><a href="/about">[ ABOUT TEAM INDIGO ]</a></div></div><p className="contact-fineprint">TEAM INDIGO / GGITS<br/>FOLLOW @TEAMINDIGOGGITS</p></div><div className="contact-ticker"><div className="ticker-track">{Array.from({length:3},(_,i)=><span key={i}>{notes.map((note,j)=><span key={j}>{note} <b>✦</b> </span>)}</span>)}</div></div><div className="contact-photo-strip"><div className="contact-photo-track">{[images.pehel,images.documentary,images.crew,images.pehel,images.documentary,images.crew].map((photo,i)=><img key={i} src={photo} alt={i<3?"Illustrative Pehel event scene":""}/>)}</div></div><div className="contact-bottom"><span>TEAM INDIGO © 2026</span><span>GYAN GANGA INSTITUTE OF TECHNOLOGY AND SCIENCES</span></div></section>;
+}
