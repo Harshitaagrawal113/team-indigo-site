@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: { unoptimized: true },
   turbopack: { root: process.cwd() },
+  allowedDevOrigins: ["127.0.0.1"],
 };
 
 export default nextConfig;

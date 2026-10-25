@@ -4,8 +4,12 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "lenis";
 import { BrandMark } from "./BrandMark";
 import { club, images } from "@/lib/content";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const routes = [
   { label: "Home", href: "/" },
@@ -36,6 +40,23 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   const navRef = useRef<HTMLElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const coverRef = useRef<HTMLDivElement>(null);
+  const lenisRef = useRef<Lenis | null>(null);
+
+  useEffect(() => {
+    if (reduced) return;
+    const lenis = new Lenis({ anchors: true, lerp: 0.1, smoothWheel: true, wheelMultiplier: 0.9 });
+    lenisRef.current = lenis;
+    lenis.on("scroll", ScrollTrigger.update);
+    const update = (time: number) => lenis.raf(time * 1000);
+    gsap.ticker.add(update);
+    gsap.ticker.lagSmoothing(0);
+    return () => {
+      gsap.ticker.remove(update);
+      gsap.ticker.lagSmoothing(500, 33);
+      lenis.destroy();
+      lenisRef.current = null;
+    };
+  }, [reduced]);
 
   useEffect(() => {
     if (sessionStorage.getItem("es-visited") || reduced) { setLoading(false); return; }
@@ -46,11 +67,17 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     return () => { tween.kill(); };
   }, [reduced]);
 
-  useEffect(() => { setMenuOpen(false); window.scrollTo(0, 0); }, [pathname]);
+  useEffect(() => {
+    setMenuOpen(false);
+    if (lenisRef.current) lenisRef.current.scrollTo(0, { immediate: true, force: true });
+    else window.scrollTo(0, 0);
+  }, [pathname]);
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setMenuOpen(false); };
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = menuOpen || loading ? "hidden" : "";
+    if (menuOpen || loading) lenisRef.current?.stop();
+    else lenisRef.current?.start();
     return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = ""; };
   }, [menuOpen, loading]);
 

@@ -4,13 +4,20 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BrandMark } from "@/components/BrandMark";
-import { Cta, Footer } from "@/components/SiteShell";
-import { images, roles, stories } from "@/lib/content";
+import { Footer } from "@/components/SiteShell";
+import { DonationPopup } from "@/components/DonationPopup";
+import { coreTeam, images, teamLeads } from "@/lib/content";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const manifesto = "Team Indigo is the event management club at Gyan Ganga Institute of Technology and Sciences. Our work is about people. Every Diwali, we organize Pehel for the auxiliary staff who help keep our college safe and clean. We bring performances, tell their stories through a documentary, and collect contributions across campus for gift hampers. We believe the people who care for our campus deserve a moment made for them.";
+const manifesto = "Team Indigo is GGITS’s student-run event management club. We plan, design, fund, and manage campus events, including Pehel. From the stage and sound to sponsors and the crowd, we learn by bringing real events to life.";
 const photos = [images.pehel, images.documentary, images.crew];
+const heroTrailImages = [
+  "/images/Harsh.jpeg", "/images/PEHEL.jpg", "/images/arpit.jpeg", "/images/ayushman.jpeg",
+  "/images/bhavya.jpeg", images.crew, images.documentary, "/images/gaurav.jpeg",
+  "/images/harshita.jpeg", "/images/logo.png", "/images/sanidhya.jpeg",
+  "/images/shailendra.jpeg", "/images/shiva.jpg", "/images/team.jpeg",
+];
 
 export default function Home() {
   const heroRef = useRef<HTMLElement>(null);
@@ -20,8 +27,6 @@ export default function Home() {
   const teamRef = useRef<HTMLDivElement>(null);
   const dragRef = useRef({ active: false, paused: false, x: 0, scroll: 0 });
   const lastTrail = useRef(0);
-  const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -41,12 +46,6 @@ export default function Home() {
     const reveals = gsap.utils.toArray<HTMLElement>(".reveal").map(el => gsap.fromTo(el, { y: 65, opacity: 0 }, { y: 0, opacity: 1, duration: .9, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 85%", once: true } }));
     return () => { intro.kill(); story?.kill(); reveals.forEach(t => t.kill()); };
   }, []);
-
-  useEffect(() => {
-    if (paused) return;
-    const id = window.setInterval(() => setActive(n => (n + 1) % stories.length), 6000);
-    return () => window.clearInterval(id);
-  }, [paused]);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -80,7 +79,7 @@ export default function Home() {
     const now = Date.now(); if (now - lastTrail.current < 130) return; lastTrail.current = now;
     const box = heroRef.current!.getBoundingClientRect();
     const el = document.createElement("img");
-    el.src = photos[Math.floor(Math.random()*photos.length)]; el.alt = ""; el.className = "trail-item";
+    el.src = heroTrailImages[Math.floor(Math.random()*heroTrailImages.length)]; el.alt = ""; el.className = "trail-item";
     el.style.left = `${event.clientX - box.left}px`; el.style.top = `${event.clientY - box.top}px`;
     el.style.transform = `translate(-50%, -50%) rotate(${Math.random()*30-15}deg)`;
     trailRef.current.appendChild(el);
@@ -92,7 +91,7 @@ export default function Home() {
       <div ref={trailRef} className="hero-trail" aria-hidden="true" />
       <BrandMark className="hero-mark rise" />
       <p className="micro rise">[ GGITS / PEOPLE FIRST ]</p>
-      <h1 className="hero-title rise"><span>Team <i className="inline-star">✳</i> Indigo</span><span>Making moments</span><span>that <i className="inline-photo"><img src={images.pehel} alt=""/></i> matter.</span></h1>
+      <h1 className="hero-title rise"><span>Team <i className="inline-star">✳</i> Indigo</span><span>Making moments</span><span>that <i className="inline-photo"><img src="/images/logo.png" alt=""/></i> matter.</span></h1>
       <p className="micro rise">[ A LITTLE MORE THAN AN EVENT ]</p>
       <BrandMark className="hero-mark bottom rise" />
       <div className="hero-bottom"><span>GYAN GANGA INSTITUTE OF TECHNOLOGY AND SCIENCES</span><span>SCROLL TO GET THE STORY ↓</span></div>
@@ -105,10 +104,9 @@ export default function Home() {
     </section></div>
 
     <section className="event-intro section-pad"><div className="section-topline"><span>01 / OUR SIGNATURE EVENT</span><span>THIS IS THE GOOD PART ↘</span></div><h2 className="editorial reveal">Pehel begins with a simple idea: <em>celebrate the people behind our campus.</em></h2><div className="photo-ribbon reveal">{photos.map((photo,i)=><img key={i} src={photo} alt={i===0?"Illustrative Pehel celebration":i===1?"Illustrative documentary scene":"Illustrative student organizers"}/>)}</div></section>
+    <DonationPopup />
 
-    <section className="stories section-pad"><div className="section-topline"><span>02 / INSIDE PEHEL</span><span>IDEAS BECOME ACTION</span></div><div className="stories-head"><h2 className="display reveal">One event.<br/><em>Many ways</em> to care.</h2><p>Performances, a documentary, and a campus-wide hamper drive come together for the auxiliary staff of GGITS.</p></div><div className="story-card" onMouseEnter={()=>setPaused(true)} onMouseLeave={()=>setPaused(false)}><div className="story-image"><img src={stories[active].image} alt={stories[active].title}/><span className="image-index">0{active+1} / 03</span></div><div className="story-content"><div className="badges"><span>{stories[active].label}</span><span>TEAM INDIGO</span></div><h3 className="display">{stories[active].title}</h3><p>{stories[active].description}</p><Cta href="/events">EXPLORE PEHEL</Cta><div className="story-controls"><div>{stories.map((story,i)=><button key={story.number} aria-label={`Show story ${i+1}`} aria-current={active===i} onClick={()=>setActive(i)}><i style={{width: active===i?"100%":"0%"}}/></button>)}</div><span>MORE OF THE STORY ↗</span></div></div></div></section>
-
-    <section className="team section-pad"><div className="section-topline"><span>03 / PEOPLE POWER</span><span>THE BEHIND-THE-SCENES BIT</span></div><h2 className="display reveal">Meet the crew<br/>making it <em>happen.</em></h2><p className="team-intro">Pehel takes performers, filmmakers, organizers, and a whole college willing to give.</p><div className="team-scroll" ref={teamRef} aria-label="Club team roles" onMouseEnter={()=>dragRef.current.paused=true} onMouseLeave={()=>dragRef.current.paused=false} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={stopDrag} onPointerCancel={stopDrag}>{[...roles,...roles].map((role,i)=><article className="team-card" key={`${role}-${i}`} aria-hidden={i>=roles.length}><div className="team-photo"><img src={images.crew} alt={i<roles.length?"Illustrative portrait of student event organizers":""} style={{objectPosition:`${14+(i%roles.length)*18}% center`}}/><span className="team-pixel" aria-hidden="true">✳</span></div><span className="role-badge">{role}</span><h3>THE {role.toLowerCase()} CREW</h3><p>Real team portraits coming soon</p></article>)}</div><div className="team-note">[ DRAG TO EXPLORE / ILLUSTRATIVE PORTRAITS TO BE REPLACED ]</div></section>
+    <section className="team section-pad"><div className="section-topline"><span>03 / PEOPLE POWER</span><span>THE BEHIND-THE-SCENES BIT</span></div><h2 className="display reveal">Meet the crew<br/>making it <em>happen.</em></h2><p className="team-intro">The people who make Team Indigo and Pehel happen.</p><div className="team-scroll" data-lenis-prevent ref={teamRef} aria-label="Team leads and core team members" onMouseEnter={()=>dragRef.current.paused=true} onMouseLeave={()=>dragRef.current.paused=false} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={stopDrag} onPointerCancel={stopDrag}>{[...teamLeads,...coreTeam,...teamLeads,...coreTeam].map((member,i)=><article className="team-card" key={`${member.name}-${i}`} aria-hidden={i>=teamLeads.length+coreTeam.length}><div className="team-photo"><img src={member.image} alt={i<teamLeads.length+coreTeam.length?member.name:""} draggable={false}/><span className="team-pixel" aria-hidden="true">✳</span></div><span className="role-badge">{member.group}</span><h3>{member.name}</h3><p>{member.role}</p></article>)}</div><div className="team-note">[ DRAG TO EXPLORE / TEAM INDIGO · GGITS ]</div></section>
     <Footer/>
   </>;
 }

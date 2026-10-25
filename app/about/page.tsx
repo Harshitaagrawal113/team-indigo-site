@@ -4,10 +4,10 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Footer } from "@/components/SiteShell";
-import { images } from "@/lib/content";
+import { teamMembers } from "@/lib/content";
 
 gsap.registerPlugin(ScrollTrigger);
-const collage = [images.crew, images.pehel, images.documentary, images.pehel, images.crew, images.documentary, images.crew, images.pehel, images.documentary, images.pehel, images.crew, images.documentary, images.pehel, images.documentary, images.crew, images.pehel];
+const collage = Array.from({ length: 16 }, (_, i) => teamMembers[i % teamMembers.length].image);
 
 export default function About() {
   const collageRef = useRef<HTMLElement>(null);
@@ -26,7 +26,7 @@ export default function About() {
     return () => { intro.kill(); timeline?.scrollTrigger?.kill(); timeline?.kill(); reveal.kill(); };
   }, []);
   return <>
-    <section className="photo-hero about-hero"><div className="photo-hero-frame"><img src={images.crew} alt="Illustrative group portrait of student event organizers"/><div className="photo-shade"/><div className="photo-hero-content"><div className="badges hero-animate"><span>TEAM INDIGO</span><span>GGITS / ONE STUDENT CREW</span></div><div className="photo-hero-grid"><h1 className="display hero-animate">The crew<br/>behind it</h1><p className="photo-hero-aside hero-animate">Team Indigo is the event management club at Gyan Ganga Institute of Technology and Sciences. Through Pehel, we bring the college together to celebrate the auxiliary staff who care for our campus.</p></div></div></div></section>
+    <section className="photo-hero about-hero"><div className="photo-hero-frame"><img src="/images/team.jpeg" alt="Team Indigo"/><div className="photo-shade"/><div className="photo-hero-content"><div className="badges hero-animate"><span>TEAM INDIGO</span><span>GGITS / ONE STUDENT CREW</span></div><div className="photo-hero-grid"><h1 className="display hero-animate">The crew<br/>behind it</h1><p className="photo-hero-aside hero-animate">Team Indigo is the event management club at Gyan Ganga Institute of Technology and Sciences. Through Pehel, we bring the college together to celebrate the auxiliary staff who care for our campus.</p></div></div></div></section>
     <div className="collage-track"><section className="collage" ref={collageRef}><div className="collage-center"><span>NO MAGIC TRICK.</span><h2>Just a lot of<br/><em>good people.</em></h2><span>AND A VERY LONG RUN SHEET.</span></div><div className="collage-grid">{collage.map((photo,i)=><div className={`collage-card collage-${i+1}`} key={i}><img src={photo} alt=""/></div>)}</div></section></div>
     <section className="name-marquee"><div className="marquee-line">{Array.from({length:4},(_,i)=><span key={i}>TEAM INDIGO © &nbsp; ✳ &nbsp; </span>)}</div><div className="stamps"><span>[ PLANS IN PROGRESS ]</span><span>[ PASSCODE: SHOW UP ]</span><span>[ PEHEL EVERY DIWALI ]</span><span>[ PEOPLE FIRST ]</span></div></section>
     <section className="about-editorial section-pad"><div className="section-topline"><span>01 / WHY WE DO IT</span><span>FOR THE PEOPLE WHO CARE FOR OUR CAMPUS</span></div><div className="about-editorial-grid"><h2 className="editorial about-statement">We plan the event.<br/>They make <em>the campus.</em></h2><div className="about-side"><span>WHAT DRIVES US / 001</span><p>Pehel puts the auxiliary staff of GGITS at the heart of a Diwali celebration. Our documentary recognizes their work keeping the college safe and clean. The performances and gift hampers are our way of saying thank you, with the wider college community helping make it happen.</p></div></div><div className="blue-bars"><i/><i/><i/></div><div className="about-strip"><div className="about-strip-track">{[...collage.slice(0,6),...collage.slice(0,6)].map((photo,i)=><img key={i} src={photo} alt={i<6?"Illustrative Pehel event scene":""}/>)}</div></div></section>
