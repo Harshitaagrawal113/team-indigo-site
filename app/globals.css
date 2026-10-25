@@ -116,6 +116,7 @@
 .bts-deck-controls button:hover{background:var(--lime);color:var(--ink)}
 @media(max-width:767px){.bts-deck-wrap{width:100%;margin-top:25px}.bts-deck{aspect-ratio:1.18}.bts-card{box-shadow:6px 6px 0 #3c859b35}}
 @media(prefers-reduced-motion:reduce){.bts-card,.bts-deck-controls button{transition:none}}
+.nav-art>img{width:148px;height:148px;object-fit:contain;position:absolute;top:20px;left:50%;transform:translateX(-50%)}
 @media(max-width:620px){.pahal-collage .collage-17,.pahal-collage .collage-18,.pahal-collage .collage-19{display:none}}
 .pehel-story{background:#f4f4f8;padding-top:95px;padding-bottom:100px}
 .pehel-story-head{display:grid;grid-template-columns:1fr minmax(280px,420px);gap:50px;align-items:end;margin:0 0 75px}

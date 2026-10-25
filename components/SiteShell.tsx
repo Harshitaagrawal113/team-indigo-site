@@ -113,7 +113,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <div className="nav-top"><button className="brand-button" onClick={() => navigate("/")} aria-label="Go to home"><BrandMark className="nav-mark"/><span>{club.name}</span></button><button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen}><span/><span/></button></div>
       <div className="nav-body" aria-hidden={!menuOpen}>
         <div className="nav-links">{routes.map((route, i) => <button key={route.href} className={pathname === route.href ? "active" : ""} onClick={() => navigate(route.href)} tabIndex={menuOpen ? 0 : -1}><span className="nav-index">0{i+1}</span>{route.label}<span className="nav-arrow">↗</span></button>)}</div>
-        <div className="nav-art"><BrandMark/><p>THE PEOPLE BEHIND<br/>PEHEL & MORE</p><span>[ EVERYONE'S INVITED ]</span></div>
+        <div className="nav-art"><img src="/images/logo.png" alt="Team Indigo logo"/><p>THE PEOPLE BEHIND<br/>PEHEL & MORE</p><span>[ EVERYONE'S INVITED ]</span></div>
         <div className="nav-bottom"><span>GGITS / STUDENT MADE</span><span>SCROLL TO EXPLORE ↙</span></div>
       </div>
     </header>
