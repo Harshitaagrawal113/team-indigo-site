@@ -22,7 +22,7 @@ export function DonationPopup({ featured = false }: { featured?: boolean }) {
 
   return <>
     {featured && <section className="donation-feature-wrap"><div className="donation-feature">
-      <div className="donation-feature-photo"><img src="/images/pehel-images/Pehel1.jpeg" alt=""/><span>PEHEL / A NEW DAWN</span></div>
+      <div className="donation-feature-photo"><img src="/images/pehel-poster.png" alt="Pehel: Ek Nayi Subah 10th anniversary poster"/><span>PEHEL / A NEW DAWN</span></div>
       <div className="donation-feature-copy"><span className="donation-kicker">[ CELEBRATING 10 YEARS OF GRATITUDE ]</span><h2>Help light up<br/><em>Pehel.</em></h2><p>Be part of a day made to celebrate the people who care for our campus. Contribute to Pehel: Ek Nayi Subah.</p><button onClick={() => setOpen(true)}>OPEN CONTRIBUTION QR <b aria-hidden="true">↗</b></button></div>
     </div></section>}
     <button className="donation-tab" onClick={() => setOpen(true)}>

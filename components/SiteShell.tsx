@@ -131,5 +131,12 @@ export function Cta({ href, children }: { href: string; children: React.ReactNod
 }
 
 export function Footer() {
-  return <footer className="footer"><div className="footer-top"><div className="footer-window"><div className="window-bar"><span/> INDIGO FILE_001 <b>✕</b></div><div className="footer-window-body"><p>GOOD THINGS TAKE A CREW.</p><Link href="/contact">JOIN THE CONVERSATION ↗</Link></div></div><div className="footer-note">TEAM INDIGO<br/>GGITS</div></div><div className="ticker"><div className="ticker-track">{Array.from({length:4},(_,i)=><span key={i}>PEHEL BEGINS WITH PEOPLE <b>✦</b> EVERY CAMPUS MOMENT IS MADE TOGETHER <b>✦</b></span>)}</div></div><div className="footer-bottom"><div className="footer-logo">T<span>I</span><sup>©</sup></div><div className="footer-links"><Link href="/">HOME</Link><Link href="/events">EVENTS</Link><Link href="/about">ABOUT</Link><Link href="/contact">CONTACT</Link></div><div className="footer-credit">© 2026 TEAM INDIGO / GGITS<br/>CONCEPT SITE · IMAGES ARE ILLUSTRATIVE</div></div><div className="footer-photo" style={{backgroundImage:`url(${images.pehel})`}}/></footer>;
+  return <footer className="footer">
+    <div className="footer-inner">
+      <Link className="footer-brand" href="/" aria-label="Team Indigo home"><BrandMark/><span>Team Indigo</span><small>GGITS · JABALPUR</small></Link>
+      <nav className="footer-nav" aria-label="Footer navigation"><Link href="/">Home</Link><Link href="/events">Events</Link><Link href="/about">About</Link><Link href="/contact">Contact</Link></nav>
+      <div className="footer-socials"><span>FOLLOW THE CREW</span><a href="https://www.instagram.com/teamindigoggits/" target="_blank" rel="noreferrer">Instagram <b>↗</b></a><a href="https://www.linkedin.com/company/team-indigo-ggits/" target="_blank" rel="noreferrer">LinkedIn <b>↗</b></a></div>
+      <p className="footer-credit">© 2026 TEAM INDIGO / GGITS<br/>GYAN GANGA INSTITUTE OF TECHNOLOGY AND SCIENCES</p>
+    </div>
+  </footer>;
 }
