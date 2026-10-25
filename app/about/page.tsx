@@ -9,7 +9,33 @@ import { coreTeam, mentors, teamLeads, teamMembers } from "@/lib/content";
 gsap.registerPlugin(ScrollTrigger);
 const collagePeople = [...teamMembers, ...mentors];
 const collage = Array.from({ length: 16 }, (_, i) => collagePeople[i % collagePeople.length].image);
-const aboutTeam = [...teamLeads, ...coreTeam, { name: "Shreyash Agrawal", role: "GRAPHICS HEAD", image: "/images/shreyash.jpeg", group: "CORE TEAM" }];
+const teamDepartments: Record<string, string> = {
+  "Harshita Agrawal": "AIML",
+  "Bhavya Upadhyay": "CSBS",
+  "Ayushman Dubey": "CS",
+  "Gaurav Jain": "CS",
+  "Shreyash Agrawal": "CSBS",
+  "Shiva Sharma": "BSC",
+  "Arpit Sharma": "AIML",
+  "Sanidhya Tiwari": "CS",
+  "Shailendra Yadav": "AIML",
+  "Harsh Tripathi": "AIML",
+};
+const aboutTeam = [...teamLeads, ...coreTeam, { name: "Shreyash Agrawal", role: "GRAPHICS HEAD", image: "/images/shreyash.jpeg", group: "CORE TEAM" }].map(member => ({
+  ...member,
+  academic: (() => {
+    const batch = member.name === "Shiva Sharma" ? "'27" : member.group === "CORE TEAM" ? "'28" : ["Harshita Agrawal", "Bhavya Upadhyay", "Ayushman Dubey", "Gaurav Jain"].includes(member.name) ? "'28" : "";
+    return [teamDepartments[member.name] ? `${teamDepartments[member.name]}${batch}` : batch].filter(Boolean).join("");
+  })(),
+}));
+const mentorDepartments: Record<string, string> = {
+  "Ujjwal Singh Thakur": "AIML",
+  "Anushka Bondre": "AIML",
+  "Suryansh Asati": "CS",
+  "Aaditya Chhipa": "CS",
+  "Siddharth Nema": "CSBS",
+  "Ayush Pandey": "AIML",
+};
 const btsImages = [
   "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.43.18.jpeg",
   "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35.jpeg",
@@ -19,7 +45,7 @@ const btsImages = [
   "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35%20(4).jpeg",
   "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35%20(5).jpeg",
   "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35%20(6).jpeg",
-  "/images/bts/tt.png",
+  "/images/bts/tt.webp",
 ];
 
 export default function About() {
@@ -105,15 +131,15 @@ export default function About() {
     };
   }, []);
   return <>
-    <section className="photo-hero about-hero"><div className="photo-hero-frame"><img src="/images/beatblaze/fteam.png" alt="Team Indigo crew"/><div className="photo-shade"/><div className="photo-hero-content"><div className="badges hero-animate"><span>TEAM INDIGO</span><span>GGITS / ONE STUDENT CREW</span></div><div className="photo-hero-grid"><h1 className="display hero-animate">The crew<br/>behind it</h1><p className="photo-hero-aside hero-animate">Team Indigo is the event management club at Gyan Ganga Institute of Technology and Sciences. Through Pehel, we bring the college together to celebrate the auxiliary staff who care for our campus.</p></div></div></div></section>
-    <div className="collage-track"><section className="collage" ref={collageRef}><div className="collage-center"><span>NO MAGIC TRICK.</span><h2>Just a lot of<br/><em>good people.</em></h2><span>AND A VERY LONG RUN SHEET.</span></div><div className="collage-grid">{collage.map((photo,i)=><div className={`collage-card collage-${i+1}`} key={i}><img src={photo} alt=""/></div>)}</div></section></div>
+    <section className="photo-hero about-hero"><div className="photo-hero-frame"><img src="/images/beatblaze/fteam.webp" alt="Team Indigo crew"/><div className="photo-shade"/><div className="photo-hero-content"><div className="badges hero-animate"><span>TEAM INDIGO</span><span>GGITS / ONE STUDENT CREW</span></div><div className="photo-hero-grid"><h1 className="display hero-animate">The crew<br/>behind it</h1><p className="photo-hero-aside hero-animate">Team Indigo is the event management club at Gyan Ganga Institute of Technology and Sciences. Through Pehel, we bring the college together to celebrate the auxiliary staff who care for our campus.</p></div></div></div></section>
+    <div className="collage-track"><section className="collage" ref={collageRef}><div className="collage-center"><span>NO MAGIC TRICK.</span><h2>Just a lot of<br/><em>amazing people.</em></h2><span>AND A VERY LONG RUN SHEET.</span></div><div className="collage-grid">{collage.map((photo,i)=><div className={`collage-card collage-${i+1}`} key={i}><img src={photo} alt=""/></div>)}</div></section></div>
     <section className="name-marquee"><div className="marquee-line">{Array.from({length:4},(_,i)=><span key={i}>TEAM INDIGO © &nbsp; ✳ &nbsp; </span>)}</div><div className="stamps"><span>[ PLANS IN PROGRESS ]</span><span>[ PASSCODE: SHOW UP ]</span><span>[ PEHEL EVERY DIWALI ]</span><span>[ PEOPLE FIRST ]</span></div></section>
-    <section className="team section-pad"><div className="section-topline"><span>02 / PEOPLE POWER</span><span>THE BEHIND-THE-SCENES BIT</span></div><h2 className="display">Meet the crew<br/>making it <em>happen.</em></h2><p className="team-intro">The people who make Team Indigo and Pehel happen.</p><div className="team-scroll about-team-scroll" aria-label="Team leads and core team members" tabIndex={0}>{[...aboutTeam,...aboutTeam].map((member,i)=><article className="team-card" key={`${member.name}-${i}`} aria-hidden={i>=aboutTeam.length}><div className="team-photo"><img src={member.image} alt={i<aboutTeam.length?member.name:""} draggable={false}/><span className="team-pixel" aria-hidden="true">✳</span></div><span className="role-badge">{member.group}</span><h3>{member.name}</h3><p>{member.role}</p></article>)}</div><div className="team-note">[ DRAG TO EXPLORE / TEAM INDIGO · GGITS ]</div></section>
+    <section className="team section-pad"><div className="section-topline"><span>02 / PEOPLE POWER</span><span>THE BEHIND-THE-SCENES BIT</span></div><h2 className="display">Meet the crew<br/>making it <em>happen.</em></h2><p className="team-intro">The people who make Team Indigo and Pehel happen.</p><div className="team-scroll about-team-scroll" aria-label="Team leads and core team members" tabIndex={0}>{[...aboutTeam,...aboutTeam].map((member,i)=><article className="team-card" key={`${member.name}-${i}`} aria-hidden={i>=aboutTeam.length}><div className="team-photo"><img src={member.image} alt={i<aboutTeam.length?member.name:""} draggable={false}/><span className="team-pixel" aria-hidden="true">✳</span></div><span className="role-badge">{member.group}</span><h3>{member.name}</h3><p>{member.role}</p>{member.academic&&<p className="team-academic">{member.academic}</p>}</article>)}</div><div className="team-note">[ DRAG TO EXPLORE / TEAM INDIGO · GGITS ]</div></section>
     <section className="mentors section-pad">
       <div className="section-topline"><span>03 / THE MENTORS</span><span>PAST LEADS / ALWAYS IN OUR CORNER</span></div>
       <div className="mentors-heading"><h2 className="display">The people who<br/>help us <em>grow.</em></h2><p>Past year leads, still guiding the crew. Their experience and encouragement help us find our way through every new event.</p></div>
       <div className="mentor-marquee" aria-label="Team Indigo mentors" tabIndex={0}>
-        <div className="mentor-marquee-track">{[...mentors,...mentors].map((mentor,i)=><article className="mentor-card" key={`${mentor.name}-${i}`} aria-hidden={i>=mentors.length}><div className="mentor-photo"><img src={mentor.image} alt={i<mentors.length?mentor.name:""}/><span>FORMER LEAD / MENTOR</span></div><h3>{mentor.name}</h3><p>TEAM INDIGO · GGITS</p></article>)}</div>
+        <div className="mentor-marquee-track">{[...mentors,...mentors].map((mentor,i)=><article className="mentor-card" key={`${mentor.name}-${i}`} aria-hidden={i>=mentors.length}><div className="mentor-photo"><img src={mentor.image} alt={i<mentors.length?mentor.name:""}/><span>FORMER LEAD / MENTOR</span></div><h3>{mentor.name}</h3><p className="team-academic">{mentorDepartments[mentor.name]} '27</p></article>)}</div>
       </div>
       <div className="mentor-note">[ THE NEXT GENERATION, WITH A LITTLE GUIDANCE ]</div>
     </section>

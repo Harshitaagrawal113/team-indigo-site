@@ -9,7 +9,7 @@ const contactMarqueeImages = [
   { src: images.pehel, alt: "Pehel celebration" },
   { src: images.crew, alt: "Team Indigo leads" },
   { src: images.team, alt: "Team Indigo" },
-  { src: "/images/footer1.jpeg", alt: "Team Indigo event" },
+  { src: "/images/footer1.webp", alt: "Team Indigo event" },
   { src: "/images/footer2.jpeg", alt: "Team Indigo event" },
   { src: "/images/footer3.jpeg", alt: "Team Indigo event" },
   { src: "/images/footer4.jpeg", alt: "Team Indigo event" },

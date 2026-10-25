@@ -13,10 +13,10 @@ gsap.registerPlugin(ScrollTrigger);
 const manifesto = "Team Indigo is GGITS’s student-run event management club. We plan, design, fund, and manage campus events, including Pehel. From the stage and sound to sponsors and the crowd, we learn by bringing real events to life.";
 const photos = [images.pehel, images.documentary, images.crew];
 const heroTrailImages = [
-  "/images/Harsh.jpeg", "/images/PEHEL.jpg", "/images/arpit.jpeg", "/images/ayushman.jpeg",
+  "/images/Harsh.webp", "/images/PEHEL.jpg", "/images/arpit.jpeg", "/images/ayushman.webp",
   "/images/bhavya.jpeg", images.crew, images.documentary, "/images/gaurav.jpeg",
-  "/images/harshita.jpeg", "/images/logo.png", "/images/sanidhya.jpeg",
-  "/images/shailendra.jpeg", "/images/shiva.jpg", "/images/team.jpeg",
+  "/images/harshita.webp", "/images/logo.png", "/images/sanidhya.jpeg",
+  "/images/shailendra.jpeg", "/images/shiva.jpg", "/images/team.webp",
 ];
 
 export default function Home() {

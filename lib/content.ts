@@ -15,56 +15,56 @@ export const images = {
   crew: "/images/4leads.jpeg",
   pehel: "/images/PEHEL.jpg",
   documentary: "/images/documentary.jpg",
-  team: "/images/team.jpeg",
+  team: "/images/team.webp",
 };
 
 export const beatPlaceImages = [
-  "/images/beatblaze/image.png",
-  "/images/beatblaze/image copy.png",
-  "/images/beatblaze/image copy 2.png",
-  "/images/beatblaze/image copy 3.png",
-  "/images/beatblaze/image copy 4.png",
-  "/images/beatblaze/image copy 5.png",
-  "/images/beatblaze/dance1.png",
+  "/images/beatblaze/image.webp",
+  "/images/beatblaze/image copy.webp",
+  "/images/beatblaze/image copy 2.webp",
+  "/images/beatblaze/image copy 3.webp",
+  "/images/beatblaze/image copy 4.webp",
+  "/images/beatblaze/image copy 5.webp",
+  "/images/beatblaze/dance1.webp",
   "/images/beatblaze/WhatsApp Image 2026-10-23 at 00.56.23.jpeg",
   "/images/beatblaze/WhatsApp Image 2026-10-23 at 00.59.03.jpeg",
   "/images/beatblaze/WhatsApp Image 2026-10-23 at 01.30.59.jpeg",
 ];
 
 export const tourismDayImages = [
-  "/images/tourism-day/Screenshot%202026-10-25%20at%201.39.30%E2%80%AFAM.png",
-  "/images/tourism-day/Screenshot%202026-10-23%20at%2012.44.50%E2%80%AFAM.png",
-  "/images/tourism-day/Screenshot%202026-10-25%20at%201.33.57%E2%80%AFAM.png",
-  "/images/tourism-day/Screenshot%202026-10-25%20at%201.37.37%E2%80%AFAM.png",
-  "/images/tourism-day/Screenshot%202026-10-25%20at%201.36.17%E2%80%AFAM.png",
-  "/images/tourism-day/Screenshot%202026-10-25%20at%201.31.13%E2%80%AFAM.png",
-  "/images/tourism-day/Screenshot%202026-10-25%20at%201.10.50%E2%80%AFAM.png",
-  "/images/tourism-day/Screenshot%202026-10-25%20at%201.36.46%E2%80%AFAM.png",
-  "/images/tourism-day/Screenshot%202026-10-25%20at%201.35.08%E2%80%AFAM.png",
-  "/images/tourism-day/Screenshot%202026-10-25%20at%201.40.49%E2%80%AFAM.png",
-  "/images/tourism-day/Screenshot%202026-10-25%20at%201.40.02%E2%80%AFAM.png",
-  "/images/tourism-day/Screenshot%202026-10-25%20at%201.38.48%E2%80%AFAM.png",
-  "/images/tourism-day/Screenshot%202026-10-25%20at%201.31.43%E2%80%AFAM.png",
-  "/images/tourism-day/Screenshot%202026-10-25%20at%201.34.37%E2%80%AFAM.png",
-  "/images/tourism-day/Screenshot%202026-10-25%20at%201.33.09%E2%80%AFAM.png",
-  "/images/tourism-day/Screenshot%202026-10-25%20at%201.32.37%E2%80%AFAM.png",
+  "/images/tourism-day/Screenshot%202026-10-25%20at%201.39.30%E2%80%AFAM.webp",
+  "/images/tourism-day/Screenshot%202026-10-23%20at%2012.44.50%E2%80%AFAM.webp",
+  "/images/tourism-day/Screenshot%202026-10-25%20at%201.33.57%E2%80%AFAM.webp",
+  "/images/tourism-day/Screenshot%202026-10-25%20at%201.37.37%E2%80%AFAM.webp",
+  "/images/tourism-day/Screenshot%202026-10-25%20at%201.36.17%E2%80%AFAM.webp",
+  "/images/tourism-day/Screenshot%202026-10-25%20at%201.31.13%E2%80%AFAM.webp",
+  "/images/tourism-day/Screenshot%202026-10-25%20at%201.10.50%E2%80%AFAM.webp",
+  "/images/tourism-day/Screenshot%202026-10-25%20at%201.36.46%E2%80%AFAM.webp",
+  "/images/tourism-day/Screenshot%202026-10-25%20at%201.35.08%E2%80%AFAM.webp",
+  "/images/tourism-day/Screenshot%202026-10-25%20at%201.40.49%E2%80%AFAM.webp",
+  "/images/tourism-day/Screenshot%202026-10-25%20at%201.40.02%E2%80%AFAM.webp",
+  "/images/tourism-day/Screenshot%202026-10-25%20at%201.38.48%E2%80%AFAM.webp",
+  "/images/tourism-day/Screenshot%202026-10-25%20at%201.31.43%E2%80%AFAM.webp",
+  "/images/tourism-day/Screenshot%202026-10-25%20at%201.34.37%E2%80%AFAM.webp",
+  "/images/tourism-day/Screenshot%202026-10-25%20at%201.33.09%E2%80%AFAM.webp",
+  "/images/tourism-day/Screenshot%202026-10-25%20at%201.32.37%E2%80%AFAM.webp",
 ];
 
 export const teachersDayImages = [
-  "/images/teachers-day/IMG20260905124658.jpg",
-  "/images/teachers-day/IMG20260905120749.jpg",
-  "/images/teachers-day/IMG20260905125815.jpg",
-  "/images/teachers-day/IMG20260905115742.jpg",
-  "/images/teachers-day/IMG20260905122930.jpg",
-  "/images/teachers-day/IMG20260905120700.jpg",
-  "/images/teachers-day/IMG20260905115802.jpg",
-  "/images/teachers-day/IMG20260905131211.jpg",
-  "/images/teachers-day/IMG20260905120323.jpg",
-  "/images/teachers-day/IMG20260905115941.jpg",
-  "/images/teachers-day/IMG20260905120656.jpg",
-  "/images/teachers-day/IMG20260905115759.jpg",
-  "/images/teachers-day/IMG20260905122917.jpg",
-  "/images/teachers-day/IMG20260905115941%20(1).jpg",
+  "/images/teachers-day/IMG20260905124658.webp",
+  "/images/teachers-day/IMG20260905120749.webp",
+  "/images/teachers-day/IMG20260905125815.webp",
+  "/images/teachers-day/IMG20260905115742.webp",
+  "/images/teachers-day/IMG20260905122930.webp",
+  "/images/teachers-day/IMG20260905120700.webp",
+  "/images/teachers-day/IMG20260905115802.webp",
+  "/images/teachers-day/IMG20260905131211.webp",
+  "/images/teachers-day/IMG20260905120323.webp",
+  "/images/teachers-day/IMG20260905115941.webp",
+  "/images/teachers-day/IMG20260905120656.webp",
+  "/images/teachers-day/IMG20260905115759.webp",
+  "/images/teachers-day/IMG20260905122917.webp",
+  "/images/teachers-day/IMG20260905115941%20(1).webp",
 ];
 
 export const stories = [
@@ -81,9 +81,9 @@ export const events = [
 ];
 
 export const teamLeads = [
-  { name: "Harshita Agrawal", role: "TEAM LEAD", image: "/images/harshita.jpeg", group: "LEAD" },
+  { name: "Harshita Agrawal", role: "TEAM LEAD", image: "/images/harshita.webp", group: "LEAD" },
   { name: "Bhavya Upadhyay", role: "TEAM LEAD", image: "/images/bhavya.jpeg", group: "LEAD" },
-  { name: "Ayushman Dubey", role: "TEAM LEAD", image: "/images/ayushman.jpeg", group: "LEAD" },
+  { name: "Ayushman Dubey", role: "TEAM LEAD", image: "/images/ayushman.webp", group: "LEAD" },
   { name: "Gaurav Jain", role: "TEAM LEAD", image: "/images/gaurav.jpeg", group: "LEAD" },
 ];
 
@@ -92,16 +92,16 @@ export const coreTeam = [
   { name: "Arpit Sharma", role: "TECHNICAL HEAD", image: "/images/arpit.jpeg", group: "CORE TEAM" },
   { name: "Sanidhya Tiwari", role: "GRAPHICS HEAD", image: "/images/sanidhya.jpeg", group: "CORE TEAM" },
   { name: "Shailendra Yadav", role: "GRAPHICS HEAD", image: "/images/shailendra.jpeg", group: "CORE TEAM" },
-  { name: "Harsh Tripathi", role: "GRAPHICS HEAD", image: "/images/Harsh.jpeg", group: "CORE TEAM" },
+  { name: "Harsh Tripathi", role: "GRAPHICS HEAD", image: "/images/Harsh.webp", group: "CORE TEAM" },
 ];
 
 export const teamMembers = [...teamLeads, ...coreTeam];
 
 export const mentors = [
   { name: "Ujjwal Singh Thakur", image: "/images/ujjwal.jpeg" },
-  { name: "Anushka Bondre", image: "/images/anushka.png" },
-  { name: "Suryansh Asati", image: "/images/suryansh.png" },
-  { name: "Aaditya Chhipa", image: "/images/aditya.png" },
+  { name: "Anushka Bondre", image: "/images/anushka.webp" },
+  { name: "Suryansh Asati", image: "/images/suryansh.webp" },
+  { name: "Aaditya Chhipa", image: "/images/aditya.webp" },
   { name: "Siddharth Nema", image: "/images/siddharth.jpeg" },
-  { name: "Ayush Pandey", image: "/images/ayush.png" },
+  { name: "Ayush Pandey", image: "/images/ayush.webp" },
 ];

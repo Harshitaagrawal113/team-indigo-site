@@ -19,7 +19,7 @@ const pehelImages = [
   "/images/pehel-images/Pehel123.jpeg", "/images/pehel-images/Pehel124.jpeg",
   "/images/pehel-images/Pehel125.jpeg", "/images/pehel-images/Pehel126.jpeg",
   "/images/pehel-images/Pehel127.jpeg", "/images/pehel-images/Pehel128.jpeg",
-  "/images/pehel-images/Pehel129.jpg",
+  "/images/pehel-images/Pehel129.webp",
 ];
 
 export default function Events() {
