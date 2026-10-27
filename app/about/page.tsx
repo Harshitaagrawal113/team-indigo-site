@@ -9,6 +9,7 @@ import { coreTeam, mentors, teamLeads, teamMembers } from "@/lib/content";
 gsap.registerPlugin(ScrollTrigger);
 const collagePeople = [...teamMembers, ...mentors];
 const collage = Array.from({ length: 16 }, (_, i) => collagePeople[i % collagePeople.length].image);
+const aboutTeamLeads = [teamLeads[1], teamLeads[0], ...teamLeads.slice(2)];
 const teamDepartments: Record<string, string> = {
   "Harshita Agrawal": "AIML",
   "Bhavya Upadhyay": "CSBS",
@@ -21,7 +22,7 @@ const teamDepartments: Record<string, string> = {
   "Shailendra Yadav": "AIML",
   "Harsh Tripathi": "AIML",
 };
-const aboutTeam = [...teamLeads, ...coreTeam, { name: "Shreyash Agrawal", role: "GRAPHICS HEAD", image: "/images/shreyash.jpeg", group: "CORE TEAM" }].map(member => ({
+const aboutTeam = [...aboutTeamLeads, ...coreTeam, { name: "Shreyash Agrawal", role: "GRAPHICS HEAD", image: "/images/shreyash.jpeg", group: "CORE TEAM" }].map(member => ({
   ...member,
   academic: (() => {
     const batch = member.name === "Shiva Sharma" ? "'27" : member.group === "CORE TEAM" ? "'28" : ["Harshita Agrawal", "Bhavya Upadhyay", "Ayushman Dubey", "Gaurav Jain"].includes(member.name) ? "'28" : "";
