@@ -22,7 +22,7 @@ const teamDepartments: Record<string, string> = {
   "Shailendra Yadav": "AIML",
   "Harsh Tripathi": "AIML",
 };
-const aboutTeam = [...aboutTeamLeads, ...coreTeam, { name: "Shreyash Agrawal", role: "GRAPHICS HEAD", image: "/images/shreyash.jpeg", group: "CORE TEAM" }].map(member => ({
+const aboutTeam = [...aboutTeamLeads, ...coreTeam, { name: "Shreyash Agrawal", role: "GRAPHICS HEAD", image: "/images/shreyash-new.webp", group: "CORE TEAM" }].map(member => ({
   ...member,
   academic: (() => {
     const batch = member.name === "Shiva Sharma" ? "'27" : member.group === "CORE TEAM" ? "'28" : ["Harshita Agrawal", "Bhavya Upadhyay", "Ayushman Dubey", "Gaurav Jain"].includes(member.name) ? "'28" : "";
