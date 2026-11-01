@@ -15,7 +15,7 @@ const photos = [images.pehel, images.documentary, images.crew];
 const homeTeamLeads = [teamLeads[1], teamLeads[0], ...teamLeads.slice(2)];
 const homeCoreTeam = [...coreTeam, { name: "Shreyash Agrawal", role: "GRAPHICS HEAD", image: "/images/shreyash-new.webp", group: "CORE TEAM" }];
 const heroTrailImages = [
-  "/images/Harsh.webp", "/images/PEHEL.webp", "/images/arpit.webp", "/images/ayushman.webp",
+  "/images/Harsh.webp", "/images/pehel.webp", "/images/arpit.webp", "/images/ayushman.webp",
   "/images/bhavya.webp", images.crew, images.documentary, "/images/gaurav.webp",
   "/images/harshita.webp", "/images/logo.webp", "/images/sanidhya.webp",
   "/images/shailendra.webp", "/images/shiva.webp", "/images/team.webp",

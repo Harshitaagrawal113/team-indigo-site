@@ -13,7 +13,7 @@ export const club = {
 
 export const images = {
   crew: "/images/4leads.webp",
-  pehel: "/images/PEHEL.webp",
+  pehel: "/images/pehel.webp",
   documentary: "/images/documentary.webp",
   team: "/images/team.webp",
 };
