@@ -15,10 +15,10 @@ const photos = [images.pehel, images.documentary, images.crew];
 const homeTeamLeads = [teamLeads[1], teamLeads[0], ...teamLeads.slice(2)];
 const homeCoreTeam = [...coreTeam, { name: "Shreyash Agrawal", role: "GRAPHICS HEAD", image: "/images/shreyash-new.webp", group: "CORE TEAM" }];
 const heroTrailImages = [
-  "/images/Harsh.webp", "/images/PEHEL.jpg", "/images/arpit.jpeg", "/images/ayushman.webp",
-  "/images/bhavya.jpeg", images.crew, images.documentary, "/images/gaurav.jpeg",
-  "/images/harshita.webp", "/images/logo.png", "/images/sanidhya.jpeg",
-  "/images/shailendra.jpeg", "/images/shiva.jpg", "/images/team.webp",
+  "/images/Harsh.webp", "/images/PEHEL.webp", "/images/arpit.webp", "/images/ayushman.webp",
+  "/images/bhavya.webp", images.crew, images.documentary, "/images/gaurav.webp",
+  "/images/harshita.webp", "/images/logo.webp", "/images/sanidhya.webp",
+  "/images/shailendra.webp", "/images/shiva.webp", "/images/team.webp",
 ];
 
 export default function Home() {
@@ -93,7 +93,7 @@ export default function Home() {
       <div ref={trailRef} className="hero-trail" aria-hidden="true" />
       <BrandMark className="hero-mark rise" />
       <p className="micro rise">[ GGITS / PEOPLE FIRST ]</p>
-      <h1 className="hero-title rise"><span>Team <i className="inline-star">✳</i> Indigo</span><span>Making moments</span><span>that <i className="inline-photo"><img src="/images/logo.png" alt=""/></i> matter.</span></h1>
+      <h1 className="hero-title rise"><span>Team <i className="inline-star">✳</i> Indigo</span><span>Making moments</span><span>that <i className="inline-photo"><img src="/images/logo.webp" alt=""/></i> matter.</span></h1>
       <p className="micro rise">[ A LITTLE MORE THAN AN EVENT ]</p>
       <BrandMark className="hero-mark bottom rise" />
       <div className="hero-bottom"><span>GYAN GANGA INSTITUTE OF TECHNOLOGY AND SCIENCES</span><span>SCROLL TO GET THE STORY ↓</span></div>
