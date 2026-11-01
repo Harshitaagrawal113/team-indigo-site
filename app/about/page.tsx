@@ -38,14 +38,14 @@ const mentorDepartments: Record<string, string> = {
   "Ayush Pandey": "AIML",
 };
 const btsImages = [
-  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.43.18.jpeg",
-  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35.jpeg",
-  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35%20(1).jpeg",
-  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35%20(2).jpeg",
-  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35%20(3).jpeg",
-  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35%20(4).jpeg",
-  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35%20(5).jpeg",
-  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35%20(6).jpeg",
+  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.43.18.webp",
+  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35.webp",
+  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35%20(1).webp",
+  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35%20(2).webp",
+  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35%20(3).webp",
+  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35%20(4).webp",
+  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35%20(5).webp",
+  "/images/bts/WhatsApp%20Image%202026-10-25%20at%2015.45.35%20(6).webp",
   "/images/bts/tt.webp",
 ];
 

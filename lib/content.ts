@@ -12,9 +12,9 @@ export const club = {
 };
 
 export const images = {
-  crew: "/images/4leads.jpeg",
-  pehel: "/images/PEHEL.jpg",
-  documentary: "/images/documentary.jpg",
+  crew: "/images/4leads.webp",
+  pehel: "/images/PEHEL.webp",
+  documentary: "/images/documentary.webp",
   team: "/images/team.webp",
 };
 
@@ -26,9 +26,9 @@ export const beatPlaceImages = [
   "/images/beatblaze/image copy 4.webp",
   "/images/beatblaze/image copy 5.webp",
   "/images/beatblaze/dance1.webp",
-  "/images/beatblaze/WhatsApp Image 2026-10-23 at 00.56.23.jpeg",
-  "/images/beatblaze/WhatsApp Image 2026-10-23 at 00.59.03.jpeg",
-  "/images/beatblaze/WhatsApp Image 2026-10-23 at 01.30.59.jpeg",
+  "/images/beatblaze/WhatsApp Image 2026-10-23 at 00.56.23.webp",
+  "/images/beatblaze/WhatsApp Image 2026-10-23 at 00.59.03.webp",
+  "/images/beatblaze/WhatsApp Image 2026-10-23 at 01.30.59.webp",
 ];
 
 export const tourismDayImages = [
@@ -68,40 +68,40 @@ export const teachersDayImages = [
 ];
 
 export const stories = [
-  { number: "01", label: "PEHEL / EVERY DIWALI", title: "A celebration of people", description: "Pehel is Team Indigo’s Diwali event for the auxiliary staff of GGITS. Students come together to organize performances and celebrate the people who help the campus run every day.", image: "/images/pehel.jpeg" },
+  { number: "01", label: "PEHEL / EVERY DIWALI", title: "A celebration of people", description: "Pehel is Team Indigo’s Diwali event for the auxiliary staff of GGITS. Students come together to organize performances and celebrate the people who help the campus run every day.", image: "/images/pehel.webp" },
   { number: "02", label: "PEHEL / THE FILM", title: "Their stories, on screen", description: "We create a documentary about the auxiliary staff and the hard work behind keeping our college safe and clean. It is a moment to see and appreciate the people whose work is often unseen.", image: images.documentary },
-  { number: "03", label: "PEHEL / THE DRIVE", title: "Giving, together", description: "The college community contributes funds for gift hampers. Team Indigo brings together Diwali gifts and useful things, then distributes the hampers to the auxiliary staff during Pehel.", image: "/images/pehel-poster.png" },
+  { number: "03", label: "PEHEL / THE DRIVE", title: "Giving, together", description: "The college community contributes funds for gift hampers. Team Indigo brings together Diwali gifts and useful things, then distributes the hampers to the auxiliary staff during Pehel.", image: "/images/pehel-poster.webp" },
 ];
 
 export const events = [
   { title: "Pehel – एक नई सुबह", type: "FLAGSHIP EVENT", theme: "Team Indigo’s major event", image: images.pehel },
-  { title: "Beat Blaze", type: "INTERNATIONAL DANCE DAY", theme: "Dance competition", image: "/images/beatblaze/beat-poster.jpeg" },
+  { title: "Beat Blaze", type: "INTERNATIONAL DANCE DAY", theme: "Dance competition", image: "/images/beatblaze/beat-poster.webp" },
   { title: "Tourism Day", type: "SPANDAN / CULTURAL SHOWCASE", theme: "Celebrating cultures through dance", image: tourismDayImages[0] },
   { title: "Teachers’ Day", type: "ANNUAL TRIBUTE", theme: "Games, performances, and gratitude", image: teachersDayImages[0] },
 ];
 
 export const teamLeads = [
   { name: "Harshita Agrawal", role: "TEAM LEAD", image: "/images/harshita.webp", group: "LEAD" },
-  { name: "Bhavya Upadhyay", role: "TEAM LEAD", image: "/images/bhavya.jpeg", group: "LEAD" },
+  { name: "Bhavya Upadhyay", role: "TEAM LEAD", image: "/images/bhavya.webp", group: "LEAD" },
   { name: "Ayushman Dubey", role: "TEAM LEAD", image: "/images/ayushman.webp", group: "LEAD" },
-  { name: "Gaurav Jain", role: "TEAM LEAD", image: "/images/gaurav.jpeg", group: "LEAD" },
+  { name: "Gaurav Jain", role: "TEAM LEAD", image: "/images/gaurav.webp", group: "LEAD" },
 ];
 
 export const coreTeam = [
-  { name: "Shiva Sharma", role: "TECHNICAL HEAD", image: "/images/shiva.jpg", group: "CORE TEAM" },
-  { name: "Arpit Sharma", role: "TECHNICAL HEAD", image: "/images/arpit.jpeg", group: "CORE TEAM" },
-  { name: "Sanidhya Tiwari", role: "GRAPHICS HEAD", image: "/images/sanidhya.jpeg", group: "CORE TEAM" },
-  { name: "Shailendra Yadav", role: "GRAPHICS HEAD", image: "/images/shailendra.jpeg", group: "CORE TEAM" },
+  { name: "Shiva Sharma", role: "TECHNICAL HEAD", image: "/images/shiva.webp", group: "CORE TEAM" },
+  { name: "Arpit Sharma", role: "TECHNICAL HEAD", image: "/images/arpit.webp", group: "CORE TEAM" },
+  { name: "Sanidhya Tiwari", role: "GRAPHICS HEAD", image: "/images/sanidhya.webp", group: "CORE TEAM" },
+  { name: "Shailendra Yadav", role: "GRAPHICS HEAD", image: "/images/shailendra.webp", group: "CORE TEAM" },
   { name: "Harsh Tripathi", role: "GRAPHICS HEAD", image: "/images/Harsh.webp", group: "CORE TEAM" },
 ];
 
 export const teamMembers = [...teamLeads, ...coreTeam];
 
 export const mentors = [
-  { name: "Ujjwal Singh Thakur", image: "/images/ujjwal.jpeg" },
+  { name: "Ujjwal Singh Thakur", image: "/images/ujjwal.webp" },
   { name: "Anushka Bondre", image: "/images/anushka.webp" },
   { name: "Suryansh Asati", image: "/images/suryansh.webp" },
   { name: "Aaditya Chhipa", image: "/images/aditya.webp" },
-  { name: "Siddharth Nema", image: "/images/siddharth.jpeg" },
+  { name: "Siddharth Nema", image: "/images/siddharth.webp" },
   { name: "Ayush Pandey", image: "/images/ayush.webp" },
 ];

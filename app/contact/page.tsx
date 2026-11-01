@@ -10,16 +10,16 @@ const contactMarqueeImages = [
   { src: images.crew, alt: "Team Indigo leads" },
   { src: images.team, alt: "Team Indigo" },
   { src: "/images/footer1.webp", alt: "Team Indigo event" },
-  { src: "/images/footer2.jpeg", alt: "Team Indigo event" },
-  { src: "/images/footer3.jpeg", alt: "Team Indigo event" },
-  { src: "/images/footer4.jpeg", alt: "Team Indigo event" },
+  { src: "/images/footer2.webp", alt: "Team Indigo event" },
+  { src: "/images/footer3.webp", alt: "Team Indigo event" },
+  { src: "/images/footer4.webp", alt: "Team Indigo event" },
 ];
 
 export default function Contact() {
   return <>
     <section className="contact-page">
       <div className="contact-main">
-        <Link className="contact-brand-lockup" href="/" aria-label="Team Indigo home"><img src="/images/logo.png" alt=""/><span>TEAM INDIGO / GGITS</span></Link>
+        <Link className="contact-brand-lockup" href="/" aria-label="Team Indigo home"><img src="/images/logo.webp" alt=""/><span>TEAM INDIGO / GGITS</span></Link>
         <div className="contact-center">
           <p className="micro">[ YOUR IDEA IS INVITED ]</p>
           <h1 className="display">Let’s make<br/>something <em>happen.</em></h1>
