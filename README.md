@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-`npm run build` creates a static export in `out/`. The site has Home, Events, About, and Contact routes.
+`npm run build` builds the Next.js app for deployment on Vercel. The site has Home, Events, About, and Contact routes. Keep Vercel's Framework Preset set to Next.js and its Output Directory unset/default so Vercel can run the image optimization endpoint used by `next/image`.
 
 ## Content to finish before public launch
 
