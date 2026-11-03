@@ -92,7 +92,7 @@ export default function Home() {
     <section className="hero" ref={heroRef} onMouseMove={makeTrail}>
       <div ref={trailRef} className="hero-trail" aria-hidden="true" />
       <BrandMark className="hero-mark rise" />
-      <p className="micro rise">[ GYAN GANGA INSTITUTE OF TECHNOLOGY AND SCIENCES ]</p>
+      <p className="micro rise">GYAN GANGA INSTITUTE OF TECHNOLOGY AND SCIENCES</p>
       <h1 className="hero-title rise"><span>Team <i className="inline-star">✳</i> Indigo</span><span>Making moments</span><span>that <i className="inline-photo"><img src="/images/logo.webp" alt=""/></i> matter.</span></h1>
       <p className="micro rise">[ A LITTLE MORE THAN AN EVENT ]</p>
       <BrandMark className="hero-mark bottom rise" />

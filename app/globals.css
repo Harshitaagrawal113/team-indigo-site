@@ -228,8 +228,10 @@
 .footer-socials{gap:8px 18px}
 .footer-socials>span{flex-basis:100%;color:var(--lime)}
 .footer-socials a b{color:var(--lime);font-size:15px}
+.footer-institutions{flex-basis:100%;display:flex;justify-content:flex-start;align-items:center;gap:8px;margin-top:8px}
+.footer-institutions img{width:64px;height:64px;object-fit:contain}
 .footer-credit{grid-column:1/-1;border-top:1px solid #ffffff45;padding-top:17px;margin:0;text-align:right;color:#ffffffc9;font-size:10px;line-height:1.6;position:static;align-self:auto;bottom:auto;right:auto}
-@media(max-width:767px){.footer{padding:32px 18px 18px}.footer-inner{grid-template-columns:1fr 1fr;gap:26px 20px}.footer-brand{grid-column:1/-1}.footer-nav{gap:12px 16px}.footer-socials{gap:8px 12px}.footer-nav a,.footer-socials a{font-size:10px}.footer-credit{font-size:8px}}
+@media(max-width:767px){.footer{padding:32px 18px 18px}.footer-inner{grid-template-columns:1fr 1fr;gap:26px 20px}.footer-brand{grid-column:1/-1}.footer-nav{gap:12px 16px}.footer-socials{gap:8px 12px}.footer-nav a,.footer-socials a{font-size:10px}.footer-institutions img{width:56px;height:56px}.footer-credit{font-size:8px}}
 @media(max-width:420px){.footer-inner{grid-template-columns:1fr}.footer-brand,.footer-credit{grid-column:1}.footer-credit{text-align:left}.footer-nav{gap:16px}.footer-socials>span{flex-basis:auto;margin-right:4px}}
 
 /* Pehel tenth anniversary / Diwali celebration */

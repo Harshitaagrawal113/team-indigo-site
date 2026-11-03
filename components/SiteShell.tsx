@@ -140,7 +140,7 @@ export function Footer() {
     <div className="footer-inner">
       <Link className="footer-brand" href="/" aria-label="Team Indigo home"><BrandMark/><span>Team Indigo</span><small>GGITS · JABALPUR</small></Link>
       <nav className="footer-nav" aria-label="Footer navigation"><Link href="/">Home</Link><Link href="/events">Events</Link><Link href="/about">About</Link><Link href="/contact">Contact</Link></nav>
-      <div className="footer-socials"><span>FOLLOW THE CREW</span><a href="https://www.instagram.com/teamindigoggits/" target="_blank" rel="noreferrer">Instagram <b>↗</b></a><a href="https://www.linkedin.com/company/team-indigo-ggits/" target="_blank" rel="noreferrer">LinkedIn <b>↗</b></a></div>
+      <div className="footer-socials"><span>FOLLOW THE CREW</span><a href="https://www.instagram.com/teamindigoggits/" target="_blank" rel="noreferrer">Instagram <b>↗</b></a><a href="https://www.linkedin.com/company/team-indigo-ggits/" target="_blank" rel="noreferrer">LinkedIn <b>↗</b></a><div className="footer-institutions" aria-label="Gyan Ganga institutions"><img src="/images/logos/4.webp" alt="Gyan Ganga Group of Institutions"/><img src="/images/logos/2.webp" alt="Gyan Ganga Group of Technology"/><img src="/images/logos/1.webp" alt="Gyan Ganga Institute of Technology and Sciences"/></div></div>
       <p className="footer-credit">© 2026 TEAM INDIGO / GGITS<br/>GYAN GANGA INSTITUTE OF TECHNOLOGY AND SCIENCES</p>
     </div>
   </footer>;
