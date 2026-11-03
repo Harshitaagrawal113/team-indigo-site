@@ -118,6 +118,11 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       </div>
     </header>
     <main id="main">{children}</main>
+    <aside className="institution-logos" aria-label="Gyan Ganga institutions">
+      <img src="/images/logos/4.webp" alt="Gyan Ganga Group of Institutions" />
+      <img src="/images/logos/2.webp" alt="Gyan Ganga Group of Technology" />
+      <img src="/images/logos/1.webp" alt="Gyan Ganga Institute of Technology and Sciences" />
+    </aside>
     <div ref={coverRef} className="pixel-cover" aria-hidden="true">{Array.from({ length: 96 }, (_, i) => <span key={i}/>)}</div>
   </>;
 }
