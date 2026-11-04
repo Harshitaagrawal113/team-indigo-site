@@ -323,7 +323,7 @@
 .teachersday-gallery .section-topline{border-color:#1d1d1d30;color:var(--blue)}
 .teachersday-gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(100px,11vw,165px);grid-auto-flow:dense;gap:10px}
 .teachersday-gallery-card{overflow:hidden;border:1px solid #1d1d1d18;background:var(--white)}
-.teachersday-gallery-card img{width:100%;height:100%;object-fit:cover}
+.teachersday-gallery-card img{width:100%;height:100%;object-fit:contain}
 .teachersday-story-card .beatplace-mini-image img{transition:none}
 .teachersday-story-card .beatplace-mini-image:hover img{transform:none}
 .teachersday-gallery-card-1{grid-column:span 2;grid-row:span 2}
